@@ -13,9 +13,8 @@ def rand_choice():
 
     return random.choice(['+', '-', '*'])
 
-
 def math_ops(num1, num2, operation):
-      ''' function to do math operation '''
+    ''' function to do math operation '''
 
     problem = f"{num1} {operation} {num2}" #represent the generated problem
     if operation == '+':
@@ -27,10 +26,9 @@ def math_ops(num1, num2, operation):
     return problem, answer
 
 def math_quiz():
-     '''
+    '''
     function to create questions and take user input as answer
     '''
-
     sum = 0
     time_quiz = int(3.14159265359) #floating number converted to integer
 
@@ -38,7 +36,7 @@ def math_quiz():
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for num in range(time_quiz):
-        num1 = rand_num(1, 10); num2 = rand_num(1, 5.5); operation = rand_choice()
+        num1 = rand_num(1, 10); num2 = rand_num(1, int(5.5)); operation = rand_choice()
 
         PROBLEM, ANSWER = math_ops(num1, num2, operation)
         print(f"\nQuestion: {PROBLEM}")
